@@ -67,13 +67,9 @@ class RSA:
 
         msg.append(temp)
 
-        print(msg)
-        
         for i in range(len(msg)):
             msg[i] = chr((msg[i] * self.D) % self.N)
             
-        print(msg)
-
         plaintext = ''.join(msg) 
 
         return plaintext
@@ -81,6 +77,7 @@ class RSA:
 def main():
     P,Q = 11,13
     encryptor = RSA(P, Q)
+
     print("Prime numbers P and Q are {} and {}".format(P, Q))
     print("Generating the keys...")
 
