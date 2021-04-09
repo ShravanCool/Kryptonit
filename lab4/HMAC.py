@@ -29,15 +29,16 @@ class HMAC:
                 i += 1
 
 
-    def digest(self):
+    # To be modified!!!
+    # def digest(self):
 
-        if self.init_flag == False:
-            self.init_key()
-            self.init_pads()
+        # if self.init_flag == False:
+            # self.init_key()
+            # self.init_pads()
 
-            self.init_flag = True
+            # self.init_flag = True
         
-        return self.hash_h(bytes(self.o_key_pad) + self.hash_h(bytes(self.i_key_pad) + self.message).digest()).digest()
+        # return self.hash_h(bytes(self.o_key_pad) + self.hash_h(bytes(self.i_key_pad) + self.message).digest()).digest()
 
     def hexdigest(self):
 
